@@ -1,0 +1,13 @@
+class Solution {
+    public int numOfStrings(String[] patterns, String word) {
+        int count = 0;
+        for(String s : patterns) {
+            boolean flag = false;
+            int i = 0;
+            if(word.contains(s)) {
+                count++;
+            }
+        }
+        return count;
+    }
+}
