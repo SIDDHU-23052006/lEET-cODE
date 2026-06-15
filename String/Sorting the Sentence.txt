@@ -1,0 +1,31 @@
+class Solution {
+    public String sortSentence(String s) {
+        int n = 1;
+        String res = new String();
+        boolean flag = true;
+        boolean f = false;
+        while(flag) {
+            String temp = new String();
+            for(int i = 0;i<s.length();i++) {
+                if((s.charAt(i)+"").equals(n+"")) {
+                    for(int j = i;j>=0 &&s.charAt(j)!=' ';j--) {
+                        temp = s.substring(j,i);
+                        f = true;
+                        flag = true;
+                    }
+                }
+                else {
+                    flag = false;
+                }
+                if(f) {
+                    f = false;
+                    res = res+temp+" ";
+                    break;
+                }
+            }
+            if(flag) n++;
+        }
+        res = res.substring(0,res.length()-1);
+        return res;
+    }
+}
