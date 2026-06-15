@@ -1,0 +1,18 @@
+class Solution {
+    public boolean halvesAreAlike(String s) {
+        s = s.toLowerCase();
+        String v = "aeiou";
+        int c1 = 0;
+        int c2 = 0;
+        int mid = (s.length())/2;
+        int i = 0;
+        int j = mid;
+        while(i < mid && j < s.length()){
+            if(i < mid && v.contains(s.charAt(i)+"")) c1++;
+            if(j<s.length() && v.contains(s.charAt(j)+"")) c2++;
+            i++;
+            j++;
+        }
+        return c1==c2;
+    }
+}
