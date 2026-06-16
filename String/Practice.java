@@ -28,14 +28,16 @@ public class Practice {
         //     }
         // }
         // System.out.println(res);
-        // int n = 97+25;
-        // System.out.println((char)n);
+        int n = 48 ;
+        System.out.println((char)n);
         // int num = Integer.parseInt("11")+96;
         // char c = (char)num;
         // String r = new String();
         // r = r+"1"+"2";
         // System.out.println(r);
-        int n = (int) 'c';
-        System.out.println((int)'1');
+        // System.out.println((int)' ');
+        // String s = "";
+        // // int n = Integer.parseInt(s);
+        // System.out.println(s);
     }
 }
