@@ -39,8 +39,36 @@ public class Practice {
         // String s = "";
         // // int n = Integer.parseInt(s);
         // System.out.println(s);
-        String s = new String("");
-        System.out.println(s.length());
-        
+        // String s = new String("");
+        // System.out.println(s.length());
+
+        // String allowed = "ab";
+        // String[] words = {"ad","bd","aaab","baa","badab"};
+
+        // int count = 0;
+        // for(String str : words) {
+        //     boolean flag = true;
+        //     int i = 0;
+        //     while(i!=str.length()){
+        //         if((allowed.contains(str.charAt(i)+"")) && str.length() < allowed.length()) {
+        //             str = str.replaceAll(str.charAt(i)+"","");
+        //             i = 0;
+        //         }
+        //         System.out.println(str);
+        //         flag = false;
+        //         break;
+        //     }
+        //     System.out.print(flag+" ");
+        //     if(flag && str.length() == 0) {
+        //         System.out.print(flag);
+        //         count++;
+        //     }
+        //     System.out.println();
+        // }
+        // System.out.println(count);
+        String s = "a1";
+        int i = s.charAt(1)-'0';
+        int j = s.charAt(0) - 96;
+        System.out.println(i+" "+j);
     }
 }
