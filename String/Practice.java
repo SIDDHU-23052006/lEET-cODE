@@ -28,8 +28,8 @@ public class Practice {
         //     }
         // }
         // System.out.println(res);
-        int n = 48 ;
-        System.out.println((char)n);
+        // int n = 48 ;
+        // System.out.println((char)n);
         // int num = Integer.parseInt("11")+96;
         // char c = (char)num;
         // String r = new String();
@@ -39,5 +39,8 @@ public class Practice {
         // String s = "";
         // // int n = Integer.parseInt(s);
         // System.out.println(s);
+        String s = new String("");
+        System.out.println(s.length());
+        
     }
 }
