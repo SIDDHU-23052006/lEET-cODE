@@ -66,9 +66,35 @@ public class Practice {
         //     System.out.println();
         // }
         // System.out.println(count);
-        String s = "a1";
-        int i = s.charAt(1)-'0';
-        int j = s.charAt(0) - 96;
-        System.out.println(i+" "+j);
+        // String s = "a1";
+        // int i = s.charAt(1)-'0';
+        // int j = s.charAt(0) - 96;
+        // System.out.println(i+" "+j);
+        int length = 2909;int width = 3968;int height = 3272; int mass = 727;
+        long volume = (long)length*width*height*1L;
+        System.out.println(volume);
+        System.out.println(37768408064L);
+        boolean flagBulky = false;
+        boolean flagMass = false;
+        System.out.println(1000000000);
+        if(length >= 10000|| height >= 10000 || width >= 10000 || mass >= 10000 || volume >= 1000000000L) {
+            flagBulky = true;
+        }
+        if(mass >= 100) {
+            flagMass = true;
+        }
+        System.out.println(flagBulky+" "+flagMass);
+        if(flagBulky && flagMass) {
+            System.out.println("both");
+        }
+        else if(!flagBulky && !flagMass) {
+            System.out.println("Neither");
+        }
+        else if(flagBulky && !flagMass) {
+            System.out.println("Bulky");
+        }
+        else if(!flagBulky && flagMass) {
+            System.out.println("Heavy");
+        }
     }
 }
