@@ -1,0 +1,10 @@
+class Solution {
+    public int divide(int dividend, int divisor) {
+        double res = dividend/divisor;
+        int num = (int) Math.floor(res);
+        if(dividend == Integer.MIN_VALUE && divisor == -1) {
+            return Integer.MAX_VALUE;
+        }
+        return num;
+    }
+}
