@@ -1,0 +1,24 @@
+class Solution {
+    public boolean isSameAfterReversals(int num) {
+        int res = num;
+        int reverse = 0;
+        int count = 0;
+        while(num > 0) {
+            count++;
+            num/=10;
+        }
+        int rcount = count;
+        while(res > 0) {
+            int temp = res % 10;
+            reverse += temp*Math.pow(10,count--);
+            res/=10;
+        }
+        reverse/=10;
+        int count1 = 0;
+        while(reverse > 0) {
+            count1++;
+            reverse/=10;
+        }
+        return rcount == count1;
+    }
+}
