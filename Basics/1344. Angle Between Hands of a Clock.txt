@@ -1,0 +1,14 @@
+class Solution {
+    public double angleClock(int hour, int minutes) {
+        if(hour == 12) {
+            hour = 0;
+        }
+        double h = 30*hour;
+        double m = 5.5*minutes;
+        double res = Math.abs(h-m);
+        if(res >= 180) {
+            return Math.abs(360-res);
+        }
+        return res;
+    }
+}
