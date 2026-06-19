@@ -102,39 +102,47 @@ public class Practice {
         //     ans^=nums[i];
         // }
         // System.out.println(ans);
-        int[] position = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30};
-        ArrayList<Integer> nums = new ArrayList<>();
-        ArrayList<Integer> count = new ArrayList<>();
-        nums.add(position[0]);
-        for(int i = 1;i<position.length;i++) {
-            if(nums.get(nums.size() - 1) != position[i]) {
-                nums.add(position[i]);
-            }
-        }
-        System.out.println(nums);
-        int pos = 0;
-        int coun = 0;
-        for(int i = 0;i<position.length;i++) {
-            int c = 0;
-            for(int j = i + 1;j<position.length;j++) {
-                if(position[i] == position[j]) {
-                    c++;
-                }
-            }
-            System.out.println(c);
-            if(coun < c) {
-                coun = c;
-                pos = position[i];
-            }
-        }
-        System.out.println(pos);
+        // int[] position = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30};
+        // ArrayList<Integer> nums = new ArrayList<>();
+        // ArrayList<Integer> count = new ArrayList<>();
+        // nums.add(position[0]);
+        // for(int i = 1;i<position.length;i++) {
+        //     if(nums.get(nums.size() - 1) != position[i]) {
+        //         nums.add(position[i]);
+        //     }
+        // }
+        // System.out.println(nums);
+        // int pos = 0;
+        // int coun = 0;
+        // for(int i = 0;i<position.length;i++) {
+        //     int c = 0;
+        //     for(int j = i + 1;j<position.length;j++) {
+        //         if(position[i] == position[j]) {
+        //             c++;
+        //         }
+        //     }
+        //     System.out.println(c);
+        //     if(coun < c) {
+        //         coun = c;
+        //         pos = position[i];
+        //     }
+        // }
+        // System.out.println(pos);
+        // int tot = 0;
+        // for(int i = 0;i<position.length;i++) {
+        //     if(position[i] != pos) {
+        //         if((pos % 2 == 0 && position[i] % 2 == 1) || (pos % 2 == 1 && position[i] % 2 == 0)) {
+        //             tot+=1;
+        //         }
+        //     }
+        // }
+        // System.out.println(tot);
+        String columnTitle = new String("FXSHRXW");
         int tot = 0;
-        for(int i = 0;i<position.length;i++) {
-            if(position[i] != pos) {
-                if((pos % 2 == 0 && position[i] % 2 == 1) || (pos % 2 == 1 && position[i] % 2 == 0)) {
-                    tot+=1;
-                }
-            }
+        int len = columnTitle.length() - 1;
+        for(int i = 0;i<columnTitle.length();i++) {
+            int num = (int) columnTitle.charAt(i) - 64;
+            tot+=num*Math.pow(26,len--);
         }
         System.out.println(tot);
     }

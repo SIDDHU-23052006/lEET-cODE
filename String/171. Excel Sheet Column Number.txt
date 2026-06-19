@@ -1,0 +1,15 @@
+class Solution {
+    public int titleToNumber(String columnTitle) {
+        if(columnTitle.length() == 1) {
+            char ch = columnTitle.charAt(0);
+            return (int) ch - 64;
+        }
+        int tot = 0;
+        int len = columnTitle.length() - 1;
+        for(int i = 0;i<columnTitle.length();i++) {
+            int num = (int) columnTitle.charAt(i) - 64;
+            tot+=num*Math.pow(26,len--);
+        }
+        return tot;
+    }
+}
