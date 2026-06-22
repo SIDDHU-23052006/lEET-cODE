@@ -1,0 +1,30 @@
+class Solution {
+    public String winningPlayer(int x, int y) {
+        if(x==0||y==0) {
+            return "Bob";
+        }
+        int count = 0;
+        boolean flag = true;
+        while(flag) {
+            int tot = 0;
+            if(x != 0) {
+                tot+=75;
+                if(y >= 4) {
+                    count++;
+                    y-=4;
+                    x--;
+                }
+                else {
+                    flag = false;
+                }
+            }
+            else {
+                flag = false;
+            }
+        }
+        if(count%2==1) {
+            return "Alice";
+        }
+        return "Bob";
+    }
+}

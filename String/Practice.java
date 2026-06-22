@@ -145,38 +145,66 @@ public class Practice {
         //     tot+=num*Math.pow(26,len--);
         // }
         // System.out.println(tot);
-        String text = new String("balloon");
-        boolean run = true;
+        // String text = new String("balloon");
+        // boolean run = true;
+        // int count = 0;
+        // String check = new String("balloon");
+        // text = text.toLowerCase();
+        // String res = new String();
+        // while(run && text.length()!=0){
+        //     for(int i = 0;i<check.length();i++) {
+        //         for(int j = 0;j<text.length();j++) {
+        //             if(check.charAt(i) == text.charAt(j)) {
+        //                 res = res+""+check.charAt(i);
+        //                 text = text.replaceFirst(check.charAt(i)+"","");
+        //                 run = true;
+        //                 break;
+        //             }
+        //             else {
+        //                 run = false;
+        //             }
+        //         }
+        //         if(!run) {
+        //             break;
+        //         }
+        //     }
+        // }
+        // if(!res.contains("n")){
+        //     System.out.println(0);
+        // }
+        // for(int i = 0;i<res.length();i++) {
+        //     if(res.charAt(i) == 'n') {
+        //         count++;
+        //     }
+        // }
+        // System.out.println(count);
+        int x = 4;
+        int y = 11;
+        if(x==0||y==0) {
+            System.out.println("Bob");
+        }
         int count = 0;
-        String check = new String("balloon");
-        text = text.toLowerCase();
-        String res = new String();
-        while(run && text.length()!=0){
-            for(int i = 0;i<check.length();i++) {
-                for(int j = 0;j<text.length();j++) {
-                    if(check.charAt(i) == text.charAt(j)) {
-                        res = res+""+check.charAt(i);
-                        text = text.replaceFirst(check.charAt(i)+"","");
-                        run = true;
-                        break;
-                    }
-                    else {
-                        run = false;
-                    }
+        boolean flag = true;
+        while(flag) {
+            if(x != 0) {
+                if(y >= 4) {
+                    count++;
+                    y-=4;
+                    x--;
                 }
-                if(!run) {
-                    break;
+                else {
+                    flag = false;
                 }
             }
-        }
-        if(!res.contains("n")){
-            System.out.println(0);
-        }
-        for(int i = 0;i<res.length();i++) {
-            if(res.charAt(i) == 'n') {
-                count++;
+            else {
+                flag = false;
             }
         }
-        System.out.println(count);
+        if(count%2==1) {
+            System.out.println("Alice");
+        }
+        else {
+            System.out.println("Bob");
+        }
     }
 }
