@@ -136,14 +136,47 @@ public class Practice {
         //         }
         //     }
         // }
+        // // System.out.println(tot);
+        // String columnTitle = new String("FXSHRXW");
+        // int tot = 0;
+        // int len = columnTitle.length() - 1;
+        // for(int i = 0;i<columnTitle.length();i++) {
+        //     int num = (int) columnTitle.charAt(i) - 64;
+        //     tot+=num*Math.pow(26,len--);
+        // }
         // System.out.println(tot);
-        String columnTitle = new String("FXSHRXW");
-        int tot = 0;
-        int len = columnTitle.length() - 1;
-        for(int i = 0;i<columnTitle.length();i++) {
-            int num = (int) columnTitle.charAt(i) - 64;
-            tot+=num*Math.pow(26,len--);
+        String text = new String("balloon");
+        boolean run = true;
+        int count = 0;
+        String check = new String("balloon");
+        text = text.toLowerCase();
+        String res = new String();
+        while(run && text.length()!=0){
+            for(int i = 0;i<check.length();i++) {
+                for(int j = 0;j<text.length();j++) {
+                    if(check.charAt(i) == text.charAt(j)) {
+                        res = res+""+check.charAt(i);
+                        text = text.replaceFirst(check.charAt(i)+"","");
+                        run = true;
+                        break;
+                    }
+                    else {
+                        run = false;
+                    }
+                }
+                if(!run) {
+                    break;
+                }
+            }
         }
-        System.out.println(tot);
+        if(!res.contains("n")){
+            System.out.println(0);
+        }
+        for(int i = 0;i<res.length();i++) {
+            if(res.charAt(i) == 'n') {
+                count++;
+            }
+        }
+        System.out.println(count);
     }
 }
