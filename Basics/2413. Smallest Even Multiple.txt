@@ -1,0 +1,16 @@
+class Solution {
+    public int smallestEvenMultiple(int n) {
+        int num = 0;
+        boolean flag = true;
+        int i = 1;
+        while(flag) {
+            if(n%n==0&&(i*n)%2==0) {
+                num = i*n;
+                flag = false;
+                break;
+            }
+            i++;
+        }
+        return num;
+    }
+}
