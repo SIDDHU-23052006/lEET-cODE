@@ -216,7 +216,8 @@ public class Practice {
         //     } 
         // }
         // System.out.println(max+"");;
-        String s = new String("dssa");
-        System.out.println(s.substring(0,4));
+        // String s = new String("dssa");
+        // System.out.println(s.substring(0,4));
+        System.out.println(7/2);
     }
 }

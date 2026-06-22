@@ -1,0 +1,13 @@
+class Solution {
+    public int numberOfMatches(int n) {
+        int tot = 0;
+        while(n != 1) {
+            if(n%2==1) {
+                tot+=1;
+            }
+            n/=2;
+            tot+=n;
+        }
+        return tot;
+    }
+}
