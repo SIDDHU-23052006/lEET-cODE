@@ -178,33 +178,45 @@ public class Practice {
         //     }
         // }
         // System.out.println(count);
-        int x = 4;
-        int y = 11;
-        if(x==0||y==0) {
-            System.out.println("Bob");
-        }
-        int count = 0;
-        boolean flag = true;
-        while(flag) {
-            if(x != 0) {
-                if(y >= 4) {
-                    count++;
-                    y-=4;
-                    x--;
-                }
-                else {
-                    flag = false;
-                }
-            }
-            else {
-                flag = false;
-            }
-        }
-        if(count%2==1) {
-            System.out.println("Alice");
-        }
-        else {
-            System.out.println("Bob");
-        }
+        // int x = 4;
+        // int y = 11;
+        // if(x==0||y==0) {
+        //     System.out.println("Bob");
+        // }
+        // int count = 0;
+        // boolean flag = true;
+        // while(flag) {
+        //     if(x != 0) {
+        //         if(y >= 4) {
+        //             count++;
+        //             y-=4;
+        //             x--;
+        //         }
+        //         else {
+        //             flag = false;
+        //         }
+        //     }
+        //     else {
+        //         flag = false;
+        //     }
+        // }
+        // if(count%2==1) {
+        //     System.out.println("Alice");
+        // }
+        // else {
+        //     System.out.println("Bob");
+        // }
+        // String num = new String("52");
+        // int max = 0;
+        // for(int i = 0;i<num.length();i++) {
+        //     String temp = new String(num.charAt(i)+"");
+        //     int n = Integer.parseInt(temp);
+        //     if(n%2==1 && max < n) {
+        //         max = n;
+        //     } 
+        // }
+        // System.out.println(max+"");;
+        String s = new String("dssa");
+        System.out.println(s.substring(0,4));
     }
 }
