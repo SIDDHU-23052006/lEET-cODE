@@ -1,0 +1,21 @@
+class Solution {
+    public boolean checkTwoChessboards(String c1, String c2) {
+        boolean flag1 = false;
+        boolean flag2 = false;
+        char ch1 = c1.charAt(0);
+        char ch2 = c2.charAt(0);
+        String temp = new String(c1.charAt(1)+"");
+        int num1 = Integer.parseInt(temp);
+        int pos1 = ch1 - 96;
+        temp = c2.charAt(1)+"";
+        int num2 = Integer.parseInt(temp);
+        int pos2 = ch2 - 96;
+        if((pos1 % 2 == 0 && num1 % 2 == 0) || (pos1 % 2 == 1 && num1 % 2 == 1)) {
+            flag1 = true;
+        } 
+        if((pos2 % 2 == 0 && num2 % 2 == 0) || (pos2 % 2 == 1 && num2 % 2 == 1)) {
+            flag2 = true;
+        } 
+        return flag1 == flag2;
+    }
+}
