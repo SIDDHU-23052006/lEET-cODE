@@ -219,31 +219,48 @@ public class Practice {
         // String s = new String("dssa");
         // System.out.println(s.substring(0,4));
         // System.out.println(7/2);
-        int n = 4;
-        if(n == 0) {
-            System.out.println(0);
+        // int n = 4;
+        // if(n == 0) {
+        //     System.out.println(0);
+        // }
+        // int res = -1;
+        // int lsum = 0;
+        // int msum = 0;
+        // int i = 1;
+        // int j = n;
+        // while(i <= j) {
+        //     if(i == j && lsum == msum) {
+        //         res = i;
+        //         break;
+        //     }
+        //     else if(lsum <= msum) {
+        //         lsum += i;
+        //         i++;
+        //     }
+        //     else if(lsum >= msum) {
+        //         msum+=j;
+        //         j--;
+        //     }
+        //     System.out.print(i+" "+j+" "+lsum+" "+msum);
+        //     System.out.println();
+        // }
+        String check = new String("adc");
+        String[] words = {"cc","acd","b","ba","bac","bad","ac","d"};
+        int count = 0;
+        for(String str : words) {
+            for(int i = 0;i<check.length();i++) {
+                if(str.length() == 0) {
+                    break;
+                }
+                if(str.contains(check.charAt(i)+"")) {
+                    str = str.replaceAll(check.charAt(i)+"","");
+                }
+            }
+            if(str.length() == 0) {
+                count++;
+            }
         }
-        int res = -1;
-        int lsum = 0;
-        int msum = 0;
-        int i = 1;
-        int j = n;
-        while(i <= j) {
-            if(i == j && lsum == msum) {
-                res = i;
-                break;
-            }
-            else if(lsum <= msum) {
-                lsum += i;
-                i++;
-            }
-            else if(lsum >= msum) {
-                msum+=j;
-                j--;
-            }
-            System.out.print(i+" "+j+" "+lsum+" "+msum);
-            System.out.println();
-        }
-        System.out.println(res);
+        System.out.println(Arrays.toString(words));
+        System.out.println(count);
     }
 }
