@@ -1,0 +1,27 @@
+class Solution {
+    public int pivotInteger(int n) {
+        if(n == 0) {
+            return 0;
+        }
+        int res = -1;
+        int lsum = 0;
+        int msum = 0;
+        int i = 1;
+        int j = n;
+        while(i <= j) {
+            if(i == j && lsum == msum) {
+                res = i;
+                break;
+            }
+            else if(lsum <= msum) {
+                lsum += i;
+                i++;
+            }
+            else if(lsum >= msum) {
+                msum+=j;
+                j--;
+            }
+        }
+        return res;
+    }
+}

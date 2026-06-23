@@ -218,6 +218,32 @@ public class Practice {
         // System.out.println(max+"");;
         // String s = new String("dssa");
         // System.out.println(s.substring(0,4));
-        System.out.println(7/2);
+        // System.out.println(7/2);
+        int n = 4;
+        if(n == 0) {
+            System.out.println(0);
+        }
+        int res = -1;
+        int lsum = 0;
+        int msum = 0;
+        int i = 1;
+        int j = n;
+        while(i <= j) {
+            if(i == j && lsum == msum) {
+                res = i;
+                break;
+            }
+            else if(lsum <= msum) {
+                lsum += i;
+                i++;
+            }
+            else if(lsum >= msum) {
+                msum+=j;
+                j--;
+            }
+            System.out.print(i+" "+j+" "+lsum+" "+msum);
+            System.out.println();
+        }
+        System.out.println(res);
     }
 }
