@@ -244,23 +244,94 @@ public class Practice {
         //     System.out.print(i+" "+j+" "+lsum+" "+msum);
         //     System.out.println();
         // }
-        String check = new String("adc");
-        String[] words = {"cc","acd","b","ba","bac","bad","ac","d"};
-        int count = 0;
-        for(String str : words) {
-            for(int i = 0;i<check.length();i++) {
-                if(str.length() == 0) {
-                    break;
-                }
-                if(str.contains(check.charAt(i)+"")) {
-                    str = str.replaceAll(check.charAt(i)+"","");
-                }
-            }
-            if(str.length() == 0) {
-                count++;
-            }
-        }
-        System.out.println(Arrays.toString(words));
-        System.out.println(count);
+        // String check = new String("adc");
+        // String[] words = {"cc","acd","b","ba","bac","bad","ac","d"};
+        // int count = 0;
+        // for(String str : words) {
+        //     for(int i = 0;i<check.length();i++) {
+        //         if(str.length() == 0) {
+        //             break;
+        //         }
+        //         if(str.contains(check.charAt(i)+"")) {
+        //             str = str.replaceAll(check.charAt(i)+"","");
+        //         }
+        //     }
+        //     if(str.length() == 0) {
+        //         count++;
+        //     }
+        // }
+        // System.out.println(Arrays.toString(words));
+        // System.out.println(count);
+        // int[] position = {1,2,2,3,3};
+        // ArrayList<Integer> nums = new ArrayList<>();
+        // nums.add(position[position.length - 1]);
+        // for(int i = position.length- 1;i>=0;i--) {
+        //     if(nums.get(nums.size() - 1) != position[i]) {
+        //         nums.add(position[i]);
+        //     }
+        // }
+        // System.out.println(nums);
+        // int pos = 0;
+        // int coun = 0;
+        // for(int i = 0;i<position.length;i++) {
+        //     int c = 1;
+        //     for(int j = i + 1;j<position.length;j++) {
+        //         if(position[i] == position[j]) {
+        //             c++;
+        //         }
+        //     }
+        //     if(coun <= c) {
+        //         coun = c;
+        //         pos = position[i];
+        //     }
+        // }
+        // System.out.println(pos);
+        // int tot = 0;
+        // for(int i = 0;i<position.length;i++) {
+        //     if(position[i] != pos && (position[i]%2==1 && pos % 2== 0) || (position[i] % 2== 0 && pos % 2 == 1)) {
+        //         tot+=1;
+        //     }
+        // }
+        // System.out.println(tot);
+        // String s = new String("1+1+1");
+        // s = s.replaceAll(" ","");
+        // String op = "/*+-";
+        // for(int i = 0;i<op.length();i++) {
+        //     for(int j = 0;j<s.length();j++) {
+        //         if(op.charAt(i) == s.charAt(j)) {
+        //             switch(op.charAt(i)) {
+        //                 case '/':
+        //                     int num1 =Integer.parseInt(s.charAt(j-1)+"");
+        //                     int num2 = Integer.parseInt(s.charAt(j+1)+"");
+        //                     int res = num1/num2;
+        //                     s = s.replace(num1+"/"+num2,res+"");
+        //                     break;
+        //                 case '*':
+        //                     int num3 =Integer.parseInt(s.charAt(j-1)+"");
+        //                     int num4 = Integer.parseInt(s.charAt(j+1)+"");
+        //                     int res1 = num3*num4;
+        //                     s = s.replace(num3+"*"+num4,res1+"");
+        //                     break;
+        //                 case '+':
+        //                     int num5 =Integer.parseInt(s.charAt(j-1)+"");
+        //                     int num6 = Integer.parseInt(s.charAt(j+1)+"");
+        //                     int res2 = num5+num6;
+        //                     s = s.replace(num5+"+"+num6,res2+"");
+        //                     break;
+        //                 case '-':
+        //                     int num7 =Integer.parseInt(s.charAt(j-1)+"");
+        //                     int num8 = Integer.parseInt(s.charAt(j+1)+"");
+        //                     int res3 = num7-num8;
+        //                     s = s.replace(num7+"-"+num8,res3+"");
+        //                     break;
+        //                 default:
+        //                     break;
+        //             }
+        //         }
+        //     }
+        // }
+        // System.out.println(Integer.parseInt(s));
+        int[] arr = {0};
+        System.out.println(arr);
     }
 }
