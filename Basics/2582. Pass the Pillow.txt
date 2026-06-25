@@ -1,0 +1,23 @@
+class Solution {
+    public int passThePillow(int n, int time) {
+        int res = 1;
+        int sum = 0;
+        boolean flag = true;
+        while(time > 0) {
+            if(flag) {
+                res++;
+                if(res == n) {
+                    flag = false;
+                }
+            }
+            else {
+                res--;
+                if(res == 1) {
+                    flag = true;
+                }
+            }
+            time--;
+        }
+        return res;
+    }
+}
