@@ -331,7 +331,47 @@ public class Practice {
         //     }
         // }
         // System.out.println(Integer.parseInt(s));
-        int[] arr = {0};
-        System.out.println(arr);
+        // int[] arr = {0};
+        // System.out.println(arr);
+        // System.out.println((int)1/2);
+        // int[] nums = {1,2,2,3};
+        // int target = 2;
+        // int count = 0;
+        // int i = 0;
+        // while(i<nums.length) {
+        //     int left;
+        //     int right;
+        //     System.out.println("left "+i);
+        //     for(left = 0;left<=i;left++){
+        //         int length = i - left+1;
+        //         int temp = 0;
+        //         for(int j = left;j<=i;j++) {
+        //             if(nums[j]==target && length != 1) {
+        //                 temp++;
+        //             }
+        //         }
+        //         System.out.println(length+" "+temp*2);
+        //         if(temp*2 > length) {
+        //             count++;
+        //         }
+        //     }
+        //     System.out.println("right "+i);
+        //     for(right = nums.length - 1;right>=i;right--) {
+        //         int temp = 0;
+        //         int length = right - i+1;
+        //         for(int j = right;j>=i;j--) {
+        //             if(nums[j]==target && length != 1) {
+        //                 temp++;
+        //             }
+        //         }
+        //         System.out.println(length+" "+temp*2);
+        //         if(temp*2 > length) {
+        //             count++;
+        //         }
+        //     }
+        //     System.out.println("count"+count);
+        //     i++;
+        // }
+        // System.out.println(count);
     }
 }
