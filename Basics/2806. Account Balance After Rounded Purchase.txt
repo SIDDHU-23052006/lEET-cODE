@@ -1,0 +1,29 @@
+class Solution {
+    public int accountBalanceAfterPurchase(int num) {
+        if(num%10==0) {
+            return 100-num;
+        }
+        if(num%5==0) {
+            return 95-num;
+        }
+        int back = 1;
+        int front = 1;
+        int tempb;
+        int tempf;
+        while(true) {
+            tempb = num - back;
+            tempf = num - front;
+            if(tempb%10 == 0) {
+                num = tempb;
+                break;
+            }
+            if(tempf%10==0) {
+                num = tempf;
+                break;
+            }
+            back--;
+            front++;
+        }
+        return 100-num;
+    }
+}
