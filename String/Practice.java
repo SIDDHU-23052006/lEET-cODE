@@ -373,5 +373,33 @@ public class Practice {
         //     i++;
         // }
         // System.out.println(count);
+        int[] nums = {3,1,3,4,2};
+        int i = 0;
+        int count = 0;
+        int num = 0;
+        while(i < nums.length) {
+            int temp = 0;
+            int left = 0;
+            int right = nums.length - 1;
+            while(left < right) {
+                if(nums[left] == nums[i]) {
+                    temp++;
+                }
+                if(nums[right] == nums[i]) {
+                    temp++;
+                }
+                left++;
+                right--;
+            }
+            System.out.println(nums[i]+"->"+temp);
+
+            if(temp > count) {
+                count = temp;
+                num = nums[i];
+                System.out.println(nums[i]);
+            }
+            i++;
+        }
+        System.out.println(num);
     }
 }
