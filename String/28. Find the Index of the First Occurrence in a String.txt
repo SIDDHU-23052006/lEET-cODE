@@ -1,0 +1,29 @@
+class Solution {
+    public int strStr(String haystack, String needle) {
+        int index = -1;
+        if(!(haystack.contains(needle))) {
+            return index;
+        }
+        for(int j = 0;j<haystack.length();j++) {
+            boolean flag = false;
+            if(haystack.charAt(j) == needle.charAt(0)) {
+                int i = j;
+                for(int k = 0;k<needle.length();k++) {
+                    if(haystack.charAt(i) == needle.charAt(k)) {
+                        flag = true;
+                        i++;
+                    }
+                    else {
+                        flag = false;
+                        break;
+                    }
+                }
+            }
+            if(flag) {
+                index = j;
+                break;
+            }
+        }
+        return index;
+    }
+}
