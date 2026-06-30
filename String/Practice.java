@@ -373,33 +373,55 @@ public class Practice {
         //     i++;
         // }
         // System.out.println(count);
-        int[] nums = {3,1,3,4,2};
-        int i = 0;
-        int count = 0;
-        int num = 0;
-        while(i < nums.length) {
-            int temp = 0;
-            int left = 0;
-            int right = nums.length - 1;
-            while(left < right) {
-                if(nums[left] == nums[i]) {
-                    temp++;
-                }
-                if(nums[right] == nums[i]) {
-                    temp++;
-                }
-                left++;
-                right--;
-            }
-            System.out.println(nums[i]+"->"+temp);
+    //     int[] nums = {3,1,3,4,2};
+    //     int i = 0;
+    //     int count = 0;
+    //     int num = 0;
+    //     while(i < nums.length) {
+    //         int temp = 0;
+    //         int left = 0;
+    //         int right = nums.length - 1;
+    //         while(left < right) {
+    //             if(nums[left] == nums[i]) {
+    //                 temp++;
+    //             }
+    //             if(nums[right] == nums[i]) {
+    //                 temp++;
+    //             }
+    //             left++;
+    //             right--;
+    //         }
+    //         System.out.println(nums[i]+"->"+temp);
 
-            if(temp > count) {
-                count = temp;
-                num = nums[i];
-                System.out.println(nums[i]);
-            }
-            i++;
+    //         if(temp > count) {
+    //             count = temp;
+    //             num = nums[i];
+    //             System.out.println(nums[i]);
+    //         }
+    //         i++;
+    //     }
+    //     System.out.println(num);
+    // }
+    String s = new String("abcabc");
+    // System.out.println(s.contains("abc"));
+    String temp = new String(s);
+    String c = new String();
+    while(temp.length() != 0) {
+        if(!(c.contains(temp.charAt(0)+""))) {
+            c = c+""+temp.charAt(0);
+            temp = temp.replaceAll(temp.charAt(0)+"","");
         }
-        System.out.println(num);
     }
+    int win = c.length();
+    System.out.println(win);
+    System.out.println(c);
+    int count = 0;
+    while(win > s.length()) {
+        int i = 0;
+        int j = win;
+        while(j > s.length()) {
+            
+        }
+    }
+}
 }
