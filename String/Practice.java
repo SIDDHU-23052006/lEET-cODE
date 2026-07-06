@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Practice {
     public static void main(String[] args) {
-        // Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         // // String s = " 8";
         // // int n = 4;
         // // System.out.println(s.charAt(0) == ' ');
@@ -402,26 +402,57 @@ public class Practice {
     //     }
     //     System.out.println(num);
     // }
-    String s = new String("abcabc");
-    // System.out.println(s.contains("abc"));
-    String temp = new String(s);
-    String c = new String();
-    while(temp.length() != 0) {
-        if(!(c.contains(temp.charAt(0)+""))) {
-            c = c+""+temp.charAt(0);
-            temp = temp.replaceAll(temp.charAt(0)+"","");
-        }
-    }
-    int win = c.length();
-    System.out.println(win);
-    System.out.println(c);
-    int count = 0;
-    while(win > s.length()) {
-        int i = 0;
-        int j = win;
-        while(j > s.length()) {
+    // String s = new String("abcabc");
+    // // System.out.println(s.contains("abc"));
+    // String temp = new String(s);
+    // String c = new String();
+    // while(temp.length() != 0) {
+    //     if(!(c.contains(temp.charAt(0)+""))) {
+    //         c = c+""+temp.charAt(0);
+    //         temp = temp.replaceAll(temp.charAt(0)+"","");
+    //     }
+    // }
+    // int win = c.length();
+    // System.out.println(win);
+    // System.out.println(c);
+    // int count = 0;
+    // while(win > s.length()) {
+    //     int i = 0;
+    //     int j = win;
+    //     while(j > s.length()) {
             
+    //     }
+    // }
+    int n =sc.nextInt();
+        int[] arr = new int[n];
+        for(int i = 0;i<n;i++) {
+            arr[i] = sc.nextInt();
         }
+        System.out.println(Arrays.toString(arr));
+        int n1 = sc.nextInt();
+        int[] arr1 = new int[n1];
+        for(int j = 0;j<n1;j++) {
+            arr[j] = sc.nextInt();
+        }
+        System.out.println(Arrays.toString(arr1));
+        if(n != n1) {
+            System.out.println("Incompatible");
+            return;
+        }
+        boolean flag = true;
+        for(int i = 0;i<n;i++) {
+            for(int j = 0;j<n1;j++) {
+                    if(!(arr[i] >= arr1[j])) {
+                    flag = false;
+                    break;
+                }
+                System.out.println(arr[i]+" "+arr1[j]+" "+flag);
+            }
+            if(!flag) {
+                break;
+            }
+        }
+        if(flag) System.out.println("Compatible");
+        else System.out.println("Incompatible");
     }
-}
 }
