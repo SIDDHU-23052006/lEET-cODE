@@ -454,22 +454,82 @@ public class Practice {
     //     }
     //     if(flag) System.out.println("Compatible");
     //     else System.out.println("Incompatible");
-    int num = sc.nextInt();
-        int p = num*num;
-        int count = 0;
-        int temp = num;
-        while(temp > 0) {
-            count++;
-            temp/=10;
+    // int num = sc.nextInt();
+    //     int p = num*num;
+    //     int count = 0;
+    //     int temp = num;
+    //     while(temp > 0) {
+    //         count++;
+    //         temp/=10;
+    //     }
+    //     double s = Math.pow(10,count);
+    //     int split = (int)s;
+    //     int a = p % split;
+    //     int b = p / split;
+    //     System.out.println(p);
+    //     System.out.println(a+" "+b);
+    //     System.out.println(a+b);
+    //     if(num == a+b) System.out.println("Kaprekar number");
+    //     else System.out.println("Not a Kaprekar number");
+    int n = sc.nextInt();
+        int m = sc.nextInt();
+        int[] arr = new int[n];
+        int sum = 0;
+        for(int i = 0;i<n;i++) {
+            arr[i] = sc.nextInt();
         }
-        double s = Math.pow(10,count);
-        int split = (int)s;
-        int a = p % split;
-        int b = p / split;
-        System.out.println(p);
-        System.out.println(a+" "+b);
-        System.out.println(a+b);
-        if(num == a+b) System.out.println("Kaprekar number");
-        else System.out.println("Not a Kaprekar number");
+        int count = 0;
+        int i = 0;
+        int temp = m;
+        while(arr.length > i) {
+            System.out.println("temp "+temp+" arr "+arr[i]+" index "+i);
+            if(temp - arr[i] > 0) {
+                temp = temp - arr[i];
+                arr[i] = 0;
+            }
+            else if(temp - arr[i] < 0) {
+                arr[i] = arr[i] - temp;
+                temp = 0;
+                count++;
+            }
+            else {
+                temp = 0;
+                arr[i] = 0;
+                count++;
+            }
+            if(temp == 0) {
+                temp = m;
+            }
+            if(arr[i] == 0) {
+                i++;
+            }
+            System.out.println(count);
+            
+        }
+        int b = arr.length-1;
+        while(arr[b] != 0) {
+            System.out.println("temp "+temp+" arr "+arr[b]+" count "+count+" index "+b);
+            if(temp - arr[b] > 0) {
+                temp = temp - arr[b];
+                arr[b] = 0;
+            }
+            else if(temp - arr[b] < 0) {
+                arr[b] = arr[b] - temp;
+                temp = 0;
+                count++;
+            }
+            else {
+                temp = 0;
+                arr[b] = 0;
+                count++;
+            }
+            if(temp == 0) {
+            }
+            if(arr[b] == 0) {
+                b--;
+            }
+            
+        }
+        System.out.println(count);
     }
 }
