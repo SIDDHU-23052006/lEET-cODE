@@ -1,0 +1,17 @@
+int num = sc.nextInt();
+        int p = num*num;
+        int count = 0;
+        int temp = num;
+        while(temp > 0) {
+            count++;
+            temp/=10;
+        }
+        double s = Math.pow(10,count);
+        int split = (int)s;
+        int a = p % split;
+        int b = p / split;
+        System.out.println(p);
+        System.out.println(a+" "+b);
+        System.out.println(a+b);
+        if(num == a+b) System.out.println("Kaprekar number");
+        else System.out.println("Not a Kaprekar number");

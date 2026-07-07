@@ -423,36 +423,53 @@ public class Practice {
             
     //     }
     // }
-    int n =sc.nextInt();
-        int[] arr = new int[n];
-        for(int i = 0;i<n;i++) {
-            arr[i] = sc.nextInt();
+    // int n =sc.nextInt();
+    //     int[] arr = new int[n];
+    //     for(int i = 0;i<n;i++) {
+    //         arr[i] = sc.nextInt();
+    //     }
+    //     System.out.println(Arrays.toString(arr));
+    //     int n1 = sc.nextInt();
+    //     int[] arr1 = new int[n1];
+    //     for(int j = 0;j<n1;j++) {
+    //         arr[j] = sc.nextInt();
+    //     }
+    //     System.out.println(Arrays.toString(arr1));
+    //     if(n != n1) {
+    //         System.out.println("Incompatible");
+    //         return;
+    //     }
+    //     boolean flag = true;
+    //     for(int i = 0;i<n;i++) {
+    //         for(int j = 0;j<n1;j++) {
+    //                 if(!(arr[i] >= arr1[j])) {
+    //                 flag = false;
+    //                 break;
+    //             }
+    //             System.out.println(arr[i]+" "+arr1[j]+" "+flag);
+    //         }
+    //         if(!flag) {
+    //             break;
+    //         }
+    //     }
+    //     if(flag) System.out.println("Compatible");
+    //     else System.out.println("Incompatible");
+    int num = sc.nextInt();
+        int p = num*num;
+        int count = 0;
+        int temp = num;
+        while(temp > 0) {
+            count++;
+            temp/=10;
         }
-        System.out.println(Arrays.toString(arr));
-        int n1 = sc.nextInt();
-        int[] arr1 = new int[n1];
-        for(int j = 0;j<n1;j++) {
-            arr[j] = sc.nextInt();
-        }
-        System.out.println(Arrays.toString(arr1));
-        if(n != n1) {
-            System.out.println("Incompatible");
-            return;
-        }
-        boolean flag = true;
-        for(int i = 0;i<n;i++) {
-            for(int j = 0;j<n1;j++) {
-                    if(!(arr[i] >= arr1[j])) {
-                    flag = false;
-                    break;
-                }
-                System.out.println(arr[i]+" "+arr1[j]+" "+flag);
-            }
-            if(!flag) {
-                break;
-            }
-        }
-        if(flag) System.out.println("Compatible");
-        else System.out.println("Incompatible");
+        double s = Math.pow(10,count);
+        int split = (int)s;
+        int a = p % split;
+        int b = p / split;
+        System.out.println(p);
+        System.out.println(a+" "+b);
+        System.out.println(a+b);
+        if(num == a+b) System.out.println("Kaprekar number");
+        else System.out.println("Not a Kaprekar number");
     }
 }
