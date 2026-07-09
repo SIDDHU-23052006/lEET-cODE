@@ -531,23 +531,51 @@ public class Practice {
             
     //     }
     //     System.out.println(count);
-    int n = sc.nextInt();
-    int[] arr = new int[n];
-    for(int i = 0;i<n;i++) {
-        arr[i] = sc.nextInt();
-    }
-    for(int i = 0;i<n;i++) {
-        if(arr[i] == 0) {
-            for(int j = i+1;j<n;j++) {
-                if(arr[j]!=0) {
-                    int temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
-                    break;
-                }
-            }
+    // int n = sc.nextInt();
+    // int[] arr = new int[n];
+    // for(int i = 0;i<n;i++) {
+    //     arr[i] = sc.nextInt();
+    // }
+    // for(int i = 0;i<n;i++) {
+    //     if(arr[i] == 0) {
+    //         for(int j = i+1;j<n;j++) {
+    //             if(arr[j]!=0) {
+    //                 int temp = arr[i];
+    //                 arr[i] = arr[j];
+    //                 arr[j] = temp;
+    //                 break;
+    //             }
+    //         }
+    //     }
+    // }
+    int[] nums = {1,3,-1,-3,5,3,6,7};
+    int k = 3;
+    if(nums.length == 1) {
+            System.out.println(Arrays.toString(nums));
         }
-    }
-    System.out.println(Arrays.toString(arr));
+        if(nums.length == 2) {
+            int[] n = {nums[0]};
+            int[] n1 = {nums[1]};
+            if (nums[0] > nums[1]) System.out.println(Arrays.toString(n));
+            else System.out.println(Arrays.toString(n1));
+        }
+    ArrayList<Integer> arr = new ArrayList<>();
+        int i = 0;
+        while(i+k <= nums.length) {
+            int max = 0;
+            
+            for(int j = i;j<i+k;j++) {
+                if(nums[j] > max) max = nums[j];
+                System.out.print(nums[j]+" ");
+            }
+            System.out.println(max);
+            arr.add(max);
+            i++;
+        }
+        System.out.println(arr.size());
+        int[] res = new int[arr.size()];
+        for(int j = 0;j<arr.size();j++) {
+            res[j] = arr.get(j);
+        }
     }
 }
