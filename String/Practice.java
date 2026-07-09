@@ -471,65 +471,83 @@ public class Practice {
     //     System.out.println(a+b);
     //     if(num == a+b) System.out.println("Kaprekar number");
     //     else System.out.println("Not a Kaprekar number");
+    // int n = sc.nextInt();
+    //     int m = sc.nextInt();
+    //     int[] arr = new int[n];
+    //     int sum = 0;
+    //     for(int i = 0;i<n;i++) {
+    //         arr[i] = sc.nextInt();
+    //     }
+    //     int count = 0;
+    //     int i = 0;
+    //     int temp = m;
+    //     while(arr.length > i) {
+    //         System.out.println("temp "+temp+" arr "+arr[i]+" index "+i);
+    //         if(temp - arr[i] > 0) {
+    //             temp = temp - arr[i];
+    //             arr[i] = 0;
+    //         }
+    //         else if(temp - arr[i] < 0) {
+    //             arr[i] = arr[i] - temp;
+    //             temp = 0;
+    //             count++;
+    //         }
+    //         else {
+    //             temp = 0;
+    //             arr[i] = 0;
+    //             count++;
+    //         }
+    //         if(temp == 0) {
+    //             temp = m;
+    //         }
+    //         if(arr[i] == 0) {
+    //             i++;
+    //         }
+    //         System.out.println(count);
+            
+    //     }
+    //     int b = arr.length-1;
+    //     while(arr[b] != 0) {
+    //         System.out.println("temp "+temp+" arr "+arr[b]+" count "+count+" index "+b);
+    //         if(temp - arr[b] > 0) {
+    //             temp = temp - arr[b];
+    //             arr[b] = 0;
+    //         }
+    //         else if(temp - arr[b] < 0) {
+    //             arr[b] = arr[b] - temp;
+    //             temp = 0;
+    //             count++;
+    //         }
+    //         else {
+    //             temp = 0;
+    //             arr[b] = 0;
+    //             count++;
+    //         }
+    //         if(temp == 0) {
+    //         }
+    //         if(arr[b] == 0) {
+    //             b--;
+    //         }
+            
+    //     }
+    //     System.out.println(count);
     int n = sc.nextInt();
-        int m = sc.nextInt();
-        int[] arr = new int[n];
-        int sum = 0;
-        for(int i = 0;i<n;i++) {
-            arr[i] = sc.nextInt();
+    int[] arr = new int[n];
+    for(int i = 0;i<n;i++) {
+        arr[i] = sc.nextInt();
+    }
+    for(int i = 0;i<n;i++) {
+        if(arr[i] == 0) {
+            for(int j = i+1;j<n;j++) {
+                if(arr[j]!=0) {
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                    break;
+                }
+            }
         }
-        int count = 0;
-        int i = 0;
-        int temp = m;
-        while(arr.length > i) {
-            System.out.println("temp "+temp+" arr "+arr[i]+" index "+i);
-            if(temp - arr[i] > 0) {
-                temp = temp - arr[i];
-                arr[i] = 0;
-            }
-            else if(temp - arr[i] < 0) {
-                arr[i] = arr[i] - temp;
-                temp = 0;
-                count++;
-            }
-            else {
-                temp = 0;
-                arr[i] = 0;
-                count++;
-            }
-            if(temp == 0) {
-                temp = m;
-            }
-            if(arr[i] == 0) {
-                i++;
-            }
-            System.out.println(count);
-            
-        }
-        int b = arr.length-1;
-        while(arr[b] != 0) {
-            System.out.println("temp "+temp+" arr "+arr[b]+" count "+count+" index "+b);
-            if(temp - arr[b] > 0) {
-                temp = temp - arr[b];
-                arr[b] = 0;
-            }
-            else if(temp - arr[b] < 0) {
-                arr[b] = arr[b] - temp;
-                temp = 0;
-                count++;
-            }
-            else {
-                temp = 0;
-                arr[b] = 0;
-                count++;
-            }
-            if(temp == 0) {
-            }
-            if(arr[b] == 0) {
-                b--;
-            }
-            
-        }
-        System.out.println(count);
+    }
+    System.out.println(Arrays.toString(arr));
     }
 }
