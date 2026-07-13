@@ -578,24 +578,24 @@ public class Practice {
     //         res[j] = arr.get(j);
     //     }
     // }
-        String s = new String("weallloveyou");
-        int k = 7;
-        int count = 0;
-        String v = new String("aeiou");
-        for(int i = 0;i+k<=s.length();i++) {
-            int temp  = 0;
-            for(int j = i;j<k+i;j++) {
-                if(v.contains(s.charAt(j)+"")) {
-                    temp++;
-                }
-                System.out.print(s.charAt(j)+"");
-            }
-            System.out.print(" "+temp);
-            System.out.println();
-            if(count < temp) {
-                count = temp;
-            }
-        }
+        String s = new String("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbsssssssssskkddddddf");
+        // int k = 7;
+        // int count = 0;
+        // String v = new String("aeiou");
+        // for(int i = 0;i+k<=s.length();i++) {
+        //     int temp  = 0;
+        //     for(int j = i;j<k+i;j++) {
+        //         if(v.contains(s.charAt(j)+"")) {
+        //             temp++;
+        //         }
+        //         System.out.print(s.charAt(j)+"");
+        //     }
+        //     System.out.print(" "+temp);
+        //     System.out.println();
+        //     if(count < temp) {
+        //         count = temp;
+        //     }
+        // }
         // System.out.println(str);
     // int[] arr = {1,2,3,4,5,6};
     // int mid  = arr.length / 2;
@@ -619,5 +619,16 @@ public class Practice {
     //     j--;
     // }
     // System.out.println(Arrays.toString(arr));
+    while(s.length() != 0) {
+        int count = 0;
+        char ch = s.charAt(0);
+        for(int i = 0;i<s.length();i++) {
+            if(s.charAt(i) == ch) {
+                count++;
+            }
+        }
+        System.out.println(ch+"->"+count);
+        s = s.replace(s.charAt(0)+"", "");
+    }
     }
 }
