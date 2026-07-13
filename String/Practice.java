@@ -548,34 +548,76 @@ public class Practice {
     //         }
     //     }
     // }
-    int[] nums = {1,3,-1,-3,5,3,6,7};
-    int k = 3;
-    if(nums.length == 1) {
-            System.out.println(Arrays.toString(nums));
-        }
-        if(nums.length == 2) {
-            int[] n = {nums[0]};
-            int[] n1 = {nums[1]};
-            if (nums[0] > nums[1]) System.out.println(Arrays.toString(n));
-            else System.out.println(Arrays.toString(n1));
-        }
-    ArrayList<Integer> arr = new ArrayList<>();
-        int i = 0;
-        while(i+k <= nums.length) {
-            int max = 0;
+    // int[] nums = {1,3,-1,-3,5,3,6,7};
+    // int k = 3;
+    // if(nums.length == 1) {
+    //         System.out.println(Arrays.toString(nums));
+    //     }
+    //     if(nums.length == 2) {
+    //         int[] n = {nums[0]};
+    //         int[] n1 = {nums[1]};
+    //         if (nums[0] > nums[1]) System.out.println(Arrays.toString(n));
+    //         else System.out.println(Arrays.toString(n1));
+    //     }
+    // ArrayList<Integer> arr = new ArrayList<>();
+    //     int i = 0;
+    //     while(i+k <= nums.length) {
+    //         int max = 0;
             
-            for(int j = i;j<i+k;j++) {
-                if(nums[j] > max) max = nums[j];
-                System.out.print(nums[j]+" ");
+    //         for(int j = i;j<i+k;j++) {
+    //             if(nums[j] > max) max = nums[j];
+    //             System.out.print(nums[j]+" ");
+    //         }
+    //         System.out.println(max);
+    //         arr.add(max);
+    //         i++;
+    //     }
+    //     System.out.println(arr.size());
+    //     int[] res = new int[arr.size()];
+    //     for(int j = 0;j<arr.size();j++) {
+    //         res[j] = arr.get(j);
+    //     }
+    // }
+        String s = new String("weallloveyou");
+        int k = 7;
+        int count = 0;
+        String v = new String("aeiou");
+        for(int i = 0;i+k<=s.length();i++) {
+            int temp  = 0;
+            for(int j = i;j<k+i;j++) {
+                if(v.contains(s.charAt(j)+"")) {
+                    temp++;
+                }
+                System.out.print(s.charAt(j)+"");
             }
-            System.out.println(max);
-            arr.add(max);
-            i++;
+            System.out.print(" "+temp);
+            System.out.println();
+            if(count < temp) {
+                count = temp;
+            }
         }
-        System.out.println(arr.size());
-        int[] res = new int[arr.size()];
-        for(int j = 0;j<arr.size();j++) {
-            res[j] = arr.get(j);
-        }
+        // System.out.println(str);
+    // int[] arr = {1,2,3,4,5,6};
+    // int mid  = arr.length / 2;
+    // int i = 0;
+    // int j = mid-1;
+    // while(i<j) {
+    //     int temp = arr[i];
+    //     arr[i] = arr[j];
+    //     arr[j] = temp;
+    //     i++;
+    //     j--;
+    // }
+    // System.out.println(Arrays.toString(arr));
+    // i = mid;
+    // j = arr.length - 1;
+    // while(i < j) {
+    //     int temp = arr[i];
+    //     arr[i] = arr[j];
+    //     arr[j] = temp;
+    //     i++;
+    //     j--;
+    // }
+    // System.out.println(Arrays.toString(arr));
     }
 }
