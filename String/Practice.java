@@ -578,8 +578,8 @@ public class Practice {
     //         res[j] = arr.get(j);
     //     }
     // }
-        String s = new String("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbsssssssssskkddddddf");
-        // int k = 7;
+        // String s = new String("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbsssssssssskkddddddf");
+        // // int k = 7;
         // int count = 0;
         // String v = new String("aeiou");
         // for(int i = 0;i+k<=s.length();i++) {
@@ -619,16 +619,17 @@ public class Practice {
     //     j--;
     // }
     // System.out.println(Arrays.toString(arr));
-    while(s.length() != 0) {
-        int count = 0;
-        char ch = s.charAt(0);
-        for(int i = 0;i<s.length();i++) {
-            if(s.charAt(i) == ch) {
-                count++;
-            }
-        }
-        System.out.println(ch+"->"+count);
-        s = s.replace(s.charAt(0)+"", "");
-    }
+    // while(s.length() != 0) {
+    //     int count = 0;
+    //     char ch = s.charAt(0);
+    //     for(int i = 0;i<s.length();i++) {
+    //         if(s.charAt(i) == ch) {
+    //             count++;
+    //         }
+    //     }
+    //     System.out.println(ch+"->"+count);
+    //     s = s.replace(s.charAt(0)+"", "");
+    // }
+    
     }
 }
