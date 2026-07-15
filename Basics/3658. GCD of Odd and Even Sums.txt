@@ -1,0 +1,33 @@
+class Solution {
+    public int gcdOfOddEvenSums(int n) {
+        int sume = 0;
+        int sumo = 0;
+        int temp = n;
+        int i = 0;
+        while(temp-- > 0) {
+            i+=2;
+            sume += i;
+        }
+        int j = 1;
+        while(n-- > 0) {
+            sumo += j;
+            j+=2;
+        }
+        return GCD(sume, sumo);
+    }
+    public int GCD(int num1,int num2) {
+        int rem=num1%num2;
+        int temp1 = num2;
+        if(rem==0){
+            return num2;
+        }
+        else {
+            while (rem != 0) {
+                int temp2 = temp1 % rem;
+                temp1 = rem;
+                rem = temp2;
+            }
+            return temp1;
+        }
+    }
+}
