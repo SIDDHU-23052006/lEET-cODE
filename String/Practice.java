@@ -630,6 +630,20 @@ public class Practice {
     //     System.out.println(ch+"->"+count);
     //     s = s.replace(s.charAt(0)+"", "");
     // }
-    
+    String s = new String("aacc");
+    String t = new String("ccac");
+    boolean flag = true;
+        if(s.length() != t.length()) System.out.println(false);
+        for(int i = 0;i<s.length();i++) {
+            if(t.contains(s.charAt(i)+"")) {
+                t = t.replaceFirst(s.charAt(i)+"","");
+            }
+            else {
+                flag = false;
+                break;
+            }
+        }
+        System.out.println(s+" "+t);
+        System.out.println(flag);
     }
 }
