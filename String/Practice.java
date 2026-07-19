@@ -630,20 +630,47 @@ public class Practice {
     //     System.out.println(ch+"->"+count);
     //     s = s.replace(s.charAt(0)+"", "");
     // }
-    String s = new String("aacc");
-    String t = new String("ccac");
-    boolean flag = true;
-        if(s.length() != t.length()) System.out.println(false);
-        for(int i = 0;i<s.length();i++) {
-            if(t.contains(s.charAt(i)+"")) {
-                t = t.replaceFirst(s.charAt(i)+"","");
-            }
-            else {
-                flag = false;
-                break;
-            }
-        }
-        System.out.println(s+" "+t);
-        System.out.println(flag);
+    // String s = new String("aacc");
+    // String t = new String("ccac");
+    // boolean flag = true;
+    //     if(s.length() != t.length()) System.out.println(false);
+    //     for(int i = 0;i<s.length();i++) {
+    //         if(t.contains(s.charAt(i)+"")) {
+    //             t = t.replaceFirst(s.charAt(i)+"","");
+    //         }
+    //         else {
+    //             flag = false;
+    //             break;
+    //         }
+    //     }
+    //     System.out.println(s+" "+t);
+    //     System.out.println(flag);
+    int n = sc.nextInt();
+    if(n == 1) {
+        int[] arr = new int[1];
+        arr[0] = 0;
+        System.out.println(Arrays.toString(arr));
+        return;
+    }
+    if(n == 2) {
+        int[] arr = new int[2];
+        arr[0] = 0;
+        arr[1] = 1;
+        System.out.println(Arrays.toString(arr));
+        return;
+    
+    }
+    int[] arr = new int[n];
+    int f = 0;
+    int s = 1;
+    arr[f] = f;
+    arr[s] = s;
+    for(int i =2;i<n;i++) {
+        arr[i] = f + s;
+        f = s;
+        s = arr[i];
+    }
+    System.out.println(Arrays.toString(arr));
+    return;
     }
 }
